@@ -219,7 +219,7 @@ Transform:
   m_GameObject: {fileID: 139529644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1f7567da8bf50441bd3674915dceadd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 5
+  maxSpeed: 3
   rotationSpeed: 1
 --- !u!114 &139529649
 MonoBehaviour:
@@ -252,8 +252,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 3151782783600905657, guid: 4c6760b7f7752724aa4f159b7c59b160,
     type: 3}
-  Launcher: {fileID: 139529647}
-  speed: 2
+  speed: 4.5
+  setTime: 2
+  distance: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
