@@ -8,7 +8,7 @@ public class ShootBullet : MonoBehaviour
     public Transform Launcher;
     public float speed = 2f;
 
-    private float distance = 3f;
+    private float distance = 3.2f;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +27,6 @@ public class ShootBullet : MonoBehaviour
             projectileInstance = Instantiate(projectile, spawnPos, Launcher.rotation) as Rigidbody2D;
 
             BulletMovement.speed = speed;
-        }
+        }   
     }
 }
