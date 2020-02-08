@@ -9,6 +9,7 @@ public class ShootBullet : MonoBehaviour
     public float distance = 3f;
     
     private Rigidbody2D projectileInstance;
+    private float currentTime = -2;
 
 
     // Start is called before the first frame update
@@ -20,14 +21,19 @@ public class ShootBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         if (Input.GetKey(KeyCode.Space))
         {
-            Vector3 spawnPos = transform.position + transform.up * distance;
+            if (Time.time - currentTime > 2)
+            {
+                Vector3 spawnPos = transform.position + transform.up * distance;
 
-            projectileInstance = Instantiate(projectile, spawnPos, transform.rotation) as Rigidbody2D;
+                projectileInstance = Instantiate(projectile, spawnPos, transform.rotation) as Rigidbody2D;
 
-            BulletMovement.speed = speed;
+                BulletMovement.speed = speed;
+
+                currentTime = Time.time;
+            }
         }
 
        

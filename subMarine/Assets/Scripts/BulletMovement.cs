@@ -26,4 +26,12 @@ public class BulletMovement : MonoBehaviour
                 Destroy(gameObject);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision.gameObject.name);
+        if(collision.gameObject.name != "Player")
+            Destroy(gameObject);
+    }
+
 }
