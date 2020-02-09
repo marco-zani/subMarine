@@ -26,4 +26,21 @@ public class BulletMovement : MonoBehaviour
                 Destroy(gameObject);
         }
     }
+
+     void OnTriggerEnter2D(Collider2D hitInfo)
+    {
+        if (hitInfo.gameObject.name != "Player")
+        {
+            if (hitInfo.gameObject.name == "Enemy")
+            {
+                Enemy_controller enemy = hitInfo.GetComponent<Enemy_controller>();
+                Debug.Log(enemy);
+
+                if (enemy != null)
+                    enemy.TakeDamage(5);
+            }
+            Destroy(gameObject);
+        }
+    }
+
 }

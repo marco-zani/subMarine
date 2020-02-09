@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3151782783600905659}
   - component: {fileID: 3151782783600905657}
   - component: {fileID: 3151782783600905662}
-  - component: {fileID: 6275399702940011155}
+  - component: {fileID: 3023399009716913248}
   m_Layer: 0
   m_Name: Torpedo
   m_TagString: Untagged
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52fc5dea8ec9ea4459b3d775a83f582d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!70 &6275399702940011155
+--- !u!70 &3023399009716913248
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,11 +127,11 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.20999998, y: 1.0099999}
+  m_Size: {x: 0.15, y: 1.0099999}
   m_Direction: 0
 --- !u!1 &5904460976475313686
 GameObject:
