@@ -6,11 +6,11 @@ public class EnemyController : MonoBehaviour
 {
     public float life = 100f;
 
-    private DestroySelf destroy;
+    private Enemy_spawner spawner;
     // Start is called before the first frame update
     void Start()
     {
-        destroy = new DestroySelf();
+        spawner = FindObjectOfType<Enemy_spawner>();   
     }
 
     // Update is called once per frame
@@ -24,6 +24,9 @@ public class EnemyController : MonoBehaviour
         life -= damage;
         Debug.Log(life);
         if (life <= 0)
+        {
             Destroy(gameObject);
+            spawner.enemyCount--;
+        }
     }
 }
