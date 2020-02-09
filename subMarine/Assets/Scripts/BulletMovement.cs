@@ -27,11 +27,20 @@ public class BulletMovement : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        Debug.Log(collision.gameObject.name);
-        if(collision.gameObject.name != "Player")
+        if (hitInfo.gameObject.name != "Player")
+        {
+            if (hitInfo.gameObject.name == "Enemy")
+            {
+                Enemy_controller enemy = hitInfo.GetComponent<Enemy_controller>();
+                Debug.Log(enemy);
+
+                if (enemy != null)
+                    enemy.TakeDamage(5);
+            }
             Destroy(gameObject);
+        }
     }
 
 }

@@ -37,7 +37,6 @@ public class ShootBullet : MonoBehaviour
             }
         }
 
-                currentTime = Time.time;
-            }
+
     }
 }
