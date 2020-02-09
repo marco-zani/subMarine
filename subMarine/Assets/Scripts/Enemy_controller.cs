@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy_controller : MonoBehaviour
 {
 
-    private float life = 10;
+    public float life = 100f;
     // Start is called before the first frame update
     void Start()
     {

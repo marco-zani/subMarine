@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletMovement : MonoBehaviour
 {
     public static float speed;
+    public float damage = 50f;
 
     Rigidbody2D rb2d;
     private float startingTime = 0;
@@ -37,7 +38,7 @@ public class BulletMovement : MonoBehaviour
                 Debug.Log(enemy);
 
                 if (enemy != null)
-                    enemy.TakeDamage(5);
+                    enemy.TakeDamage(damage);
             }
             Destroy(gameObject);
         }
