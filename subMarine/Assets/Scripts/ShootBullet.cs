@@ -5,9 +5,10 @@ using UnityEngine;
 public class ShootBullet : MonoBehaviour
 {
     public Rigidbody2D projectile;
-    public float speed = 2f;
-    public float distance = 3f;
-    
+    public float speed = 7f;
+    public float setTime = 2f;
+    public float distance = 1f;
+
     private Rigidbody2D projectileInstance;
     private float currentTime = -2;
 
@@ -15,7 +16,7 @@ public class ShootBullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentTime = -2;
     }
 
     // Update is called once per frame
@@ -36,6 +37,7 @@ public class ShootBullet : MonoBehaviour
             }
         }
 
-       
+                currentTime = Time.time;
+            }
     }
 }
