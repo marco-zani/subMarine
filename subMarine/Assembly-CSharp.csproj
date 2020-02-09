@@ -65,7 +65,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BulletMovement.cs" />
     <Compile Include="Assets\Scripts\Camera_Behaviour.cs" />
-    <Compile Include="Assets\Scripts\Enemy_controller.cs" />
+    <Compile Include="Assets\Scripts\DestroySelf.cs" />
+    <Compile Include="Assets\Scripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\ShootBullet.cs" />
     <Reference Include="Unity.Timeline.Editor">
