@@ -31,7 +31,7 @@ public class BulletMovement : MonoBehaviour
     {
         if (hitInfo.gameObject.name != "Player")
         {
-            if (hitInfo.gameObject.name == "Enemy")
+            if (hitInfo.tag == "Enemy")
             {
                 Enemy_controller enemy = hitInfo.GetComponent<Enemy_controller>();
                 Debug.Log(enemy);
