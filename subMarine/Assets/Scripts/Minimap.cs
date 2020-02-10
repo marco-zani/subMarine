@@ -8,8 +8,8 @@ public class Minimap : MonoBehaviour
 
     private void LateUpdate()
     {
-        Vector2 newPosition = player.position;
-        newPosition.y = transform.position.y;
+        Vector3 newPosition = player.position;
+        newPosition.z = transform.position.z;
         transform.position = newPosition;
     }
 }
