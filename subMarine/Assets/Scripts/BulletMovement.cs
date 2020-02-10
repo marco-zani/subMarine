@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class BulletMovement : MonoBehaviour
 {
@@ -10,7 +12,10 @@ public class BulletMovement : MonoBehaviour
     Rigidbody2D rb2d;
     private float startingTime = 0;
     public GameObject explosion;
+    public GameObject enemyData;
 
+
+    private GameObject popUp;
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -35,6 +40,12 @@ public class BulletMovement : MonoBehaviour
         {
             if (hitInfo.tag == "Enemy")
             {
+                
+                popUp = Instantiate(enemyData) as GameObject;
+                popUp.GetComponentInChildren<Text>().text = hitInfo.name + "   Lv: x";
+
+                Debug.Log(popUp.GetComponentInChildren<Text>().text);
+
                 EnemyController enemy = hitInfo.GetComponent<EnemyController>();
                 Debug.Log(enemy);
 
