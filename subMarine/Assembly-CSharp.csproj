@@ -69,6 +69,8 @@
     <Compile Include="Assets\Scripts\Enemy_spawner.cs" />
     <Compile Include="Assets\Scripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\HealthBar.cs" />
+    <Compile Include="Assets\Scripts\Minimap.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\ShootBullet.cs" />
     <Reference Include="Unity.Timeline.Editor">
