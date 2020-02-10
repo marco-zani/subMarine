@@ -781,8 +781,10 @@ MonoBehaviour:
   Xoffset: 9
   Yoffset: 5
   spawnSpace: 10
+  deathZone: 10
   enemyPrefab: {fileID: 4778725131507008889, guid: 0e108682246ded848af046492e697516,
     type: 3}
+  maxEnemy: 10
   enemyCount: 0
 --- !u!1 &1788543891
 GameObject:
