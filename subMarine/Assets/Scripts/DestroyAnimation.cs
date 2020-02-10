@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroySelf : MonoBehaviour
+public class DestroyAnimation : MonoBehaviour
 {
-    public void animDestroy()
+    public void destroyAnimation()
     {
         Destroy(gameObject);
-    }
+    }    
 }

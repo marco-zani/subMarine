@@ -722,7 +722,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 711617872}
   m_HandleRect: {fileID: 0}
@@ -763,8 +763,27 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1582026210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582026208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5922713fccc6b24eaa47fadcb567e47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 139529647}
+  Xoffset: 9
+  Yoffset: 5
+  spawnSpace: 10
+  enemyPrefab: {fileID: 4778725131507008889, guid: 0e108682246ded848af046492e697516,
+    type: 3}
+  enemyCount: 0
 --- !u!1 &1788543891
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,6 +941,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2078706993435125181, guid: 0e108682246ded848af046492e697516,
+        type: 3}
+      propertyPath: animation
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078706993435125181, guid: 0e108682246ded848af046492e697516,
+        type: 3}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 1507109003467631440, guid: eee202fb58ccefd42addff51b2d4eca9,
+        type: 3}
     - target: {fileID: 4778725131507008889, guid: 0e108682246ded848af046492e697516,
         type: 3}
       propertyPath: m_Name

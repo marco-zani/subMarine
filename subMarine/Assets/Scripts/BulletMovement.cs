@@ -9,6 +9,7 @@ public class BulletMovement : MonoBehaviour
 
     Rigidbody2D rb2d;
     private float startingTime = 0;
+    public GameObject explosion;
 
     void Start()
     {
@@ -38,7 +39,10 @@ public class BulletMovement : MonoBehaviour
                 Debug.Log(enemy);
 
                 if (enemy != null)
+                {
                     enemy.TakeDamage(damage);
+                    Instantiate(explosion, transform.position, Quaternion.identity);
+                }
             }
             Destroy(gameObject);
         }
