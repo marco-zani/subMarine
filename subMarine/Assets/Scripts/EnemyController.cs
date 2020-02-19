@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public float life = 100f;
+    public float maxLife = 100f;
+    public float currentLife;
+
 
     private Enemy_spawner spawner;
+    private HUD_Script HUD;
+
     // Start is called before the first frame update
     void Start()
     {
+        currentLife = maxLife;
         spawner = FindObjectOfType<Enemy_spawner>();
     }
 
@@ -21,9 +26,8 @@ public class EnemyController : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        life -= damage;
-        Debug.Log(life);
-        if (life <= 0)
+        currentLife -= damage;
+        if (currentLife <= 0)
         {
             Destroy(gameObject);
             spawner.enemyCount--;

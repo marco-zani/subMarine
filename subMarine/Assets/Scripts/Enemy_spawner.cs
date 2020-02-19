@@ -12,13 +12,7 @@ public class Enemy_spawner : MonoBehaviour
 
     private EnemyController[] enemyList;
 
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (enemyCount < maxEnemy)
@@ -37,7 +31,6 @@ public class Enemy_spawner : MonoBehaviour
         }
 
         enemyList = FindObjectsOfType<EnemyController>();
-        Debug.Log(enemyList.Length);
 
         foreach (var enemy in enemyList)
         {

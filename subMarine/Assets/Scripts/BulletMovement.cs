@@ -14,11 +14,12 @@ public class BulletMovement : MonoBehaviour
     public GameObject explosion;
     public GameObject enemyData;
 
+    private HUD_Script enemyHUD;
 
-    private GameObject popUp;
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        enemyHUD = FindObjectOfType<HUD_Script>();
     }
 
     void Update()
@@ -40,20 +41,14 @@ public class BulletMovement : MonoBehaviour
         {
             if (hitInfo.tag == "Enemy")
             {
-                
-                popUp = Instantiate(enemyData) as GameObject;
-                popUp.GetComponentInChildren<Text>().text = hitInfo.name + "   Lv: x";
-
-                Debug.Log(popUp.GetComponentInChildren<Text>().text);
-
                 EnemyController enemy = hitInfo.GetComponent<EnemyController>();
-                Debug.Log(enemy);
 
                 if (enemy != null)
                 {
                     enemy.TakeDamage(damage);
                     Instantiate(explosion, transform.position, Quaternion.identity);
                 }
+                enemyHUD.ShowEnemyData(enemy.name, enemy.currentLife, enemy.maxLife, "over 9000");
             }
             Destroy(gameObject);
         }
