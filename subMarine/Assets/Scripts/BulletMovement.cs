@@ -46,6 +46,7 @@ public class BulletMovement : MonoBehaviour
                 if (enemy != null)
                 {
                     enemy.TakeDamage(damage);
+                    Destroy(gameObject);
                     Instantiate(explosion, transform.position, Quaternion.identity);
                 }
                 enemyHUD.ShowEnemyData(enemy.name, enemy.currentLife, enemy.maxLife, "over 9000");
